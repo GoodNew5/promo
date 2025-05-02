@@ -1,0 +1,49 @@
+@use '@/styles/mixins.scss';
+@use '@/styles/breakpoints.scss';
+
+.icon-coffee {
+  width: 10rem;
+  height: 10rem;
+  color: var(--color1);
+}
+
+// Write styles this for body, html etc..
+:global(.chicken-road-page) {
+  border: .3rem tomato solid;
+
+  :root {
+    --color1: hsl(40deg 100% 93% / 88%);
+    --color3: hsl(0deg 0% 20%);
+    --font-montserrat: "Montserrat", sans-serif;
+
+    --color: var(--color1); // main color
+    --background: var(--color3); // main background
+    --font: var(--font-montserrat); // main font
+    --main-scene-background: black; // main scene background
+  }
+}
+
+.box {
+  height: 10rem;
+  width: 10rem;
+
+  @include breakpoints.mobile-only {
+    background-color: limegreen;
+  }
+
+  @include breakpoints.tablet() {
+    background-color: tomato;
+  }
+}
+
+.box2 {
+  position: relative;
+  height: 10rem;
+  width: 10rem;
+
+  @include mixins.pseudo-element('before') {
+    position: absolute;
+    inset: 0;
+    background-color: turquoise;
+  }
+}

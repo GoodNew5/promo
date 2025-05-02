@@ -1,0 +1,129 @@
+@use 'reset';
+@use 'breakpoints';
+
+:root {
+  --html-font-size: 62.5%; // 10px
+  --body-font-size: 1.4rem;
+
+  --font-montserrat: "Montserrat", sans-serif;
+}
+
+[inert] {
+  pointer-events: none;
+  cursor: default;
+  user-select: none;
+  touch-action: none;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+html {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  text-size-adjust: none;
+  touch-action: manipulation;
+  text-wrap: pretty;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
+  font-size: var(--html-font-size);
+  scroll-behavior: smooth;
+  background-color: var(--background);
+  color: var(--color);
+  font-family: var(--font);
+
+  /**
+    px need because safari on ios sometimes
+    do autoscale when page first load
+  **/
+
+  /* stylelint-disable-next-line unit-allowed-list */
+  min-width: 320px;
+}
+
+body, html {
+  min-height: 100svh;
+}
+
+body {
+  flex-direction: column;
+  display: flex;
+  font-size: var(--body-font-size);
+
+  .Safari & {
+    overflow-y: scroll;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-block {
+  display: block;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-end {
+  align-items: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+
+@for $i from 1 through 6 {
+  .mb-#{$i} {
+    margin-bottom: #{$i}rem;
+  }
+}
+
+@for $i from 1 through 6 {
+  .mt-#{$i} {
+    margin-top: #{$i}rem;
+  }
+}
+
+h1 {
+  font-size: 5rem;
+  margin: 2rem 0;
+}
+
+p {
+  margin: 2rem 0;
+}

@@ -1,0 +1,34 @@
+@use "@styles/breakpoints.scss";
+@use "@styles/mixins.scss";
+
+.btn {
+  border-radius: .5rem;
+  transition: var(--transition-duration03);
+  border: var(--border2);
+  line-height: 2rem;
+  padding: 1.6rem;
+  font-size: 1.8rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.variant-one {
+    background-color: tomato;
+    color: black;
+
+    &:active {
+      box-shadow: none;
+    }
+
+    @include breakpoints.hover {
+      background-color: color-mix(in srgb, tomato 90%, black 10%);
+    }
+  }
+}
+
+.btn-text {
+  .is-loading & {
+    visibility: hidden;
+  }
+}
