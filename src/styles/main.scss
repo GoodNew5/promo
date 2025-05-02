@@ -5,7 +5,7 @@
   --html-font-size: 62.5%; // 10px
   --body-font-size: 1.4rem;
 
-  --font-montserrat: "Montserrat", sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
 }
 
 [inert] {
@@ -46,7 +46,8 @@ html {
   min-width: 320px;
 }
 
-body, html {
+body,
+html {
   min-height: 100svh;
 }
 
@@ -105,7 +106,6 @@ body {
 .text-uppercase {
   text-transform: uppercase;
 }
-
 
 @for $i from 1 through 6 {
   .mb-#{$i} {

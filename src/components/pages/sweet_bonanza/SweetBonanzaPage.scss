@@ -1,4 +1,3 @@
-
 .icon-container {
   width: 10rem;
   height: 10rem;
@@ -7,12 +6,12 @@
 
 // Write styles this for body, html etc..
 :global(.sweet-bonanza-page) {
-  border: .3rem lightsalmon solid;
+  border: 0.3rem lightsalmon solid;
 
   :root {
-    --color1: #241F22;
+    --color1: #241f22;
     --color3: hsl(0deg 0% 20%);
-    --font-montserrat: "Montserrat", sans-serif;
+    --font-montserrat: 'Montserrat', sans-serif;
 
     --color: hsl(36deg 95% 59%); // main color
     --background: var(--color3); // main background

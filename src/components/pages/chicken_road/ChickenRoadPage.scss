@@ -9,12 +9,12 @@
 
 // Write styles this for body, html etc..
 :global(.chicken-road-page) {
-  border: .3rem tomato solid;
+  border: 0.3rem tomato solid;
 
   :root {
     --color1: hsl(40deg 100% 93% / 88%);
     --color3: hsl(0deg 0% 20%);
-    --font-montserrat: "Montserrat", sans-serif;
+    --font-montserrat: 'Montserrat', sans-serif;
 
     --color: var(--color1); // main color
     --background: var(--color3); // main background

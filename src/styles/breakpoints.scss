@@ -1,4 +1,4 @@
-@use "sass:string";
+@use 'sass:string';
 
 $hands: 768px;
 $lap: 1024px;
@@ -18,38 +18,43 @@ $breakpoints: (
   }
 }
 
-
-@mixin mobile-only() {// max-width: 767px
+@mixin mobile-only() {
+  // max-width: 767px
   @media (max-width: $hands - 1) {
     @content;
   }
 }
 
-@mixin tablet-only() {// min-width: 768px and max-width: 1023px
+@mixin tablet-only() {
+  // min-width: 768px and max-width: 1023px
   @media (min-width: $hands) and (max-width: $lap - 1) {
     @content;
   }
 }
 
-@mixin laptop-only() {// min-width: 1024px and max-width: 1439px
+@mixin laptop-only() {
+  // min-width: 1024px and max-width: 1439px
   @media (min-width: $lap) and (max-width: $desk - 1) {
     @content;
   }
 }
 
-@mixin tablet() {// min-width: 768px
+@mixin tablet() {
+  // min-width: 768px
   @media (min-width: $hands) {
     @content;
   }
 }
 
-@mixin laptop() {// min-width: 1024px
+@mixin laptop() {
+  // min-width: 1024px
   @media (min-width: $lap) {
     @content;
   }
 }
 
-@mixin desktop() {// min-width: 1440px
+@mixin desktop() {
+  // min-width: 1440px
   @media (min-width: $desk) {
     @content;
   }

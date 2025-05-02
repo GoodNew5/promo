@@ -1,8 +1,8 @@
-@use "@styles/breakpoints.scss";
-@use "@styles/mixins.scss";
+@use '@styles/breakpoints.scss';
+@use '@styles/mixins.scss';
 
 .btn {
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   transition: var(--transition-duration03);
   border: var(--border2);
   line-height: 2rem;
